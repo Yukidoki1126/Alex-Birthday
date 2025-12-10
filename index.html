@@ -10,9 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 
-<!-- Link to external CSS -->
 <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
@@ -29,7 +27,7 @@ for(let i=0;i<40;i++){
 }
 </script>
 
-<!-- First Page -->
+<!-- FIRST PAGE -->
 <div class="first-page">
     <div class="title-container">
         <h1 class="cute-title">Happy Birthday Aly 🎀</h1>
@@ -38,7 +36,7 @@ for(let i=0;i<40;i++){
     </div>
 </div>
 
-<!-- Modal for gift -->
+<!-- GIFT MODAL -->
 <div id="giftModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -46,24 +44,19 @@ for(let i=0;i<40;i++){
             <div class="gift-lid"></div>
             <div class="gift-box"></div>
         </div>
-        <!-- Letter inside gift -->
+
+        <!-- LETTER -->
         <div id="letter" class="letter-paper">
-            <img src="assets/letter.png" alt="Birthday Letter" class="letter-img">
+            <img src="assets/Letter.png" alt="Birthday Letter" class="letter-img">
         </div>
     </div>
 </div>
 
 <!-- JavaScript -->
 <script>
-// Modal functions
-function openModal(){
-    document.getElementById('giftModal').style.display = 'block';
-}
-function closeModal(){
-    document.getElementById('giftModal').style.display = 'none';
-}
+function openModal(){ document.getElementById('giftModal').style.display = 'block'; }
+function closeModal(){ document.getElementById('giftModal').style.display = 'none'; }
 
-// Gift box animation
 let giftOpened=false;
 function openGiftBox(){
     if(giftOpened) return;
@@ -92,7 +85,6 @@ function openGiftBox(){
     },600)
 }
 
-// Close modal when clicking outside content
 window.onclick = function(event) {
     let modal = document.getElementById('giftModal');
     if (event.target == modal) {
