@@ -24,7 +24,7 @@ for(let i=0;i<40;i++){
     h.style.top=Math.random()*window.innerHeight+"px";
     h.style.fontSize=(Math.random()*30+10)+"px";
     document.body.appendChild(h);
-    window.scrollTo(0,0);
+  
 }
 </script>
 
@@ -93,6 +93,8 @@ function openGiftBox(){
     },600)
 }
 </script>
-
+<script>
+window.scrollTo(0,0); // always start at top on page load
+</script>
 </body>
 </html>
