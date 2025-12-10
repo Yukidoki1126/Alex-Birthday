@@ -4,181 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday Aly 💗</title>
-<style>
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Body */
-body{
-    margin:0;
-    padding:0;
-    background:#ffd6e9;
-    font-family:'Poppins', sans-serif;
-    text-align:center;
-    overflow-x:hidden;
-}
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-/* Floating hearts */
-.heart{
-    position:absolute;
-    color:#ff7ab8;
-    animation: float 6s infinite;
-    opacity:0.7;
-}
-@keyframes float{
-    0%{ transform:translateY(0); }
-    100%{ transform:translateY(-900px); opacity:0;}
-}
+<!-- Link to external CSS -->
+<link rel="stylesheet" href="style.css">
 
-/* Cute title */
-.cute-title{
-    font-family:'Poppins', sans-serif;
-    color:#ff66b3;
-    font-size:44px;
-    text-align:center;
-    margin-top:60px;
-}
-.stickers{
-    font-size:40px;
-    text-align:center;
-    margin:20px 0;
-}
-
-/* Open gift button */
-.open-gift-btn{
-    background:#ff88c9;
-    border:none;
-    border-radius:20px;
-    padding:14px 30px;
-    color:white;
-    font-size:20px;
-    cursor:pointer;
-    display:block;
-    margin:20px auto;
-    transition:.3s;
-}
-.open-gift-btn:hover{
-    transform:scale(1.05);
-}
-
-/* Gift container */
-.gift-container{
-    margin:50px auto;
-    text-align:center;
-    cursor:pointer;
-    position:relative;
-}
-
-/* gift box */
-.gift-box{
-    width:120px;
-    height:120px;
-    background:#ff7ebd;
-    border-radius:10px;
-    position:relative;
-    box-shadow:0 8px 25px rgba(255,100,160,0.4);
-    transition:.4s;
-}
-
-/* ribbon */
-.gift-box:before{
-    content:"";
-    position:absolute;
-    width:20px;
-    height:120px;
-    background:#ff4f9a;
-    left:50%;
-    transform:translateX(-50%);
-}
-.gift-box:after{
-    content:"";
-    position:absolute;
-    height:20px;
-    width:120px;
-    background:#ff4f9a;
-    top:50%;
-    transform:translateY(-50%);
-}
-
-/* LID */
-.gift-lid{
-    width:140px;
-    height:35px;
-    background:#ff8ec9;
-    border-radius:10px 10px 5px 5px;
-    position:absolute;
-    top:-35px;
-    left:50%;
-    transform:translateX(-50%);
-    transition:.5s ease;
-    box-shadow:0 8px 25px rgba(255,120,170,.4);
-}
-
-/* shake animation */
-@keyframes shake{
-    0%,100%{ transform:translateX(-50%) rotate(0deg); }
-    20%{ transform:translateX(-50%) rotate(4deg); }
-    40%{ transform:translateX(-50%) rotate(-4deg); }
-    60%{ transform:translateX(-50%) rotate(3deg); }
-    80%{ transform:translateX(-50%) rotate(-3deg); }
-}
-
-/* when opened */
-.open .gift-lid{
-    transform:translateX(-50%) rotate(-25deg) translateY(-60px);
-}
-.open .gift-box{
-    filter:brightness(1.2);
-    box-shadow:0 0 40px rgba(255,140,180,.7);
-}
-
-/* Letter paper */
-.letter-paper{
-    background:#fff url('https://i.imgur.com/5H2E3mA.png') repeat-y;
-    width:80%;
-    max-width:550px;
-    margin:20px auto;
-    padding:40px 30px;
-    border-radius:20px;
-    font-family: 'Indie Flower', cursive; 
-    line-height:1.8;
-    font-size:24px;
-    color:#444;
-    white-space: pre-wrap;
-    opacity:0;
-    transform:scale(.7) translateY(40px);
-    transition: all .8s ease-out;
-    position:relative;
-    box-shadow:
-      0 0 35px rgba(255,170,200,.6),
-      0 0 60px rgba(255,120,180,.4);
-    border:4px dashed #ffb6d9;
-}
-.letter-open{
-    opacity:1;
-    transform:scale(1) translateY(0);
-}
-.letter-title{
-    text-align:center;
-    font-family:'Poppins', sans-serif;
-    font-size:28px;
-    color:#ff4f9a;
-    margin-bottom:20px;
-}
-
-/* Sparkles */
-.sparkle{
-    position:absolute;
-    pointer-events:none;
-    animation:sparkleMove 3s linear infinite;
-    opacity:.8;
-}
-@keyframes sparkleMove{
-    0%{ transform:translateY(0) scale(.6); opacity:.9; }
-    100%{ transform:translateY(-200px) scale(1.2); opacity:0; }
-}
-</style>
 </head>
 <body>
 
@@ -195,7 +27,7 @@ for(let i=0;i<40;i++){
 }
 </script>
 
-<!-- Cute title -->
+<!-- Fancy Title -->
 <h1 class="cute-title">Happy Birthday Aly 🎀</h1>
 <div class="stickers">🎀 💖 ✨ 🎂 💝</div>
 
@@ -223,6 +55,7 @@ so mao lng to. I know youre such a great person and I hope daghan blessings maab
 ~ Ken 💗
 </div>
 
+<!-- JavaScript -->
 <script>
 // Show gift when button clicked
 function showGift(){
@@ -245,7 +78,7 @@ function openGiftBox(){
         setTimeout(()=>{
             document.getElementById('letter').classList.add('letter-open');
 
-            // sparkles
+            // sparkles around letter
             for(let i=0;i<20;i++){
                 let s=document.createElement("div")
                 s.innerHTML="✨"
