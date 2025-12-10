@@ -1,26 +1,38 @@
-/* Full-page section */
+/* ----------------- BACKGROUND ----------------- */
+/* First page background with paragraph image */
 .first-page {
-    position: relative;
     width: 100%;
     height: 100vh;
-    background: url('assets/hello-kitty.png') no-repeat center center/cover;
+    /* Use first background image from assets */
+    background: url('assets/Your paragraph text (1).png') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    position: relative;
 }
 
-/* Container around title */
+/* Pink overlay for cute effect */
+.first-page::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,182,193,0.4);
+    top: 0; left:0;
+}
+
+/* ----------------- TITLE ----------------- */
 .title-container {
-    background: rgba(255, 255, 255, 0.6);
+    position: relative;
+    z-index: 1;
+    background: rgba(255,255,255,0.6);
     padding: 50px 40px;
     border-radius: 30px;
-    box-shadow: 0 0 50px rgba(255, 140, 180, 0.7);
+    box-shadow: 0 0 50px rgba(255,140,180,0.7);
     text-align: center;
     max-width: 800px;
 }
 
-/* Huge Happy Birthday Title inside container */
 .cute-title {
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 100px;
@@ -31,19 +43,12 @@
     margin: 0 0 20px 0;
     animation: floatText 4s ease-in-out infinite alternate;
 }
-
 @keyframes floatText {
     0% { transform: translateY(0); }
     100% { transform: translateY(-15px); }
 }
 
-/* Stickers under title */
-.stickers {
-    font-size: 40px;
-    margin-bottom: 30px;
-}
-
-/* Open Gift Button */
+.stickers { font-size: 40px; margin-bottom: 30px; }
 .open-gift-btn{
     background:#ff88c9;
     border:none;
@@ -54,11 +59,9 @@
     cursor:pointer;
     transition:.3s;
 }
-.open-gift-btn:hover{
-    transform:scale(1.05);
-}
+.open-gift-btn:hover{ transform:scale(1.05); }
 
-/* Floating hearts */
+/* ----------------- HEARTS ----------------- */
 .heart{
     position:absolute;
     color:#ff7ab8;
@@ -70,22 +73,13 @@
     100%{ transform:translateY(-900px); opacity:0;}
 }
 
-/* Modal styling */
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 100; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.6); 
-}
+/* ----------------- MODAL ----------------- */
+.modal { display:none; position:fixed; z-index:100; left:0; top:0;
+    width:100%; height:100%; overflow:auto; background-color: rgba(0,0,0,0.6); }
 
 .modal-content {
     background-color: #ffd6e9;
-    margin: 10% auto; 
+    margin: 10% auto;
     padding: 20px;
     border-radius: 25px;
     width: 90%;
@@ -95,70 +89,29 @@
     box-shadow: 0 0 50px rgba(255,140,180,0.7);
 }
 
-/* Close button */
 .close-btn {
     color: #ff4f9a;
     font-size: 28px;
     font-weight: bold;
     position: absolute;
-    right: 20px;
-    top: 10px;
+    right: 20px; top: 10px;
     cursor: pointer;
 }
-.close-btn:hover {
-    color: #ff1a75;
-}
+.close-btn:hover { color: #ff1a75; }
 
-/* Gift container */
-.gift-container{
-    margin:50px auto;
-    text-align:center;
-    cursor:pointer;
-    position:relative;
-}
-
-/* gift box */
-.gift-box{
-    width:120px;
-    height:120px;
-    background:#ff7ebd;
-    border-radius:10px;
-    position:relative;
-    box-shadow:0 8px 25px rgba(255,100,160,0.4);
-    transition:.4s;
-}
+/* ----------------- GIFT ----------------- */
+.gift-container { margin:50px auto; text-align:center; cursor:pointer; position:relative; }
+.gift-box{ width:120px; height:120px; background:#ff7ebd; border-radius:10px; position:relative;
+    box-shadow:0 8px 25px rgba(255,100,160,0.4); transition:.4s; }
 .gift-box:before{
-    content:"";
-    position:absolute;
-    width:20px;
-    height:120px;
-    background:#ff4f9a;
-    left:50%;
-    transform:translateX(-50%);
+    content:""; position:absolute; width:20px; height:120px; background:#ff4f9a; left:50%; transform:translateX(-50%);
 }
 .gift-box:after{
-    content:"";
-    position:absolute;
-    height:20px;
-    width:120px;
-    background:#ff4f9a;
-    top:50%;
-    transform:translateY(-50%);
+    content:""; position:absolute; height:20px; width:120px; background:#ff4f9a; top:50%; transform:translateY(-50%);
 }
-
-/* LID */
-.gift-lid{
-    width:140px;
-    height:35px;
-    background:#ff8ec9;
-    border-radius:10px 10px 5px 5px;
-    position:absolute;
-    top:-35px;
-    left:50%;
-    transform:translateX(-50%);
-    transition:.5s ease;
-    box-shadow:0 8px 25px rgba(255,120,170,.4);
-}
+.gift-lid{ width:140px; height:35px; background:#ff8ec9; border-radius:10px 10px 5px 5px;
+    position:absolute; top:-35px; left:50%; transform:translateX(-50%); transition:.5s ease;
+    box-shadow:0 8px 25px rgba(255,120,170,.4); }
 @keyframes shake{
     0%,100%{ transform:translateX(-50%) rotate(0deg); }
     20%{ transform:translateX(-50%) rotate(4deg); }
@@ -166,48 +119,18 @@
     60%{ transform:translateX(-50%) rotate(3deg); }
     80%{ transform:translateX(-50%) rotate(-3deg); }
 }
-.open .gift-lid{
-    transform:translateX(-50%) rotate(-25deg) translateY(-60px);
-}
-.open .gift-box{
-    filter:brightness(1.2);
-    box-shadow:0 0 40px rgba(255,140,180,.7);
-}
+.open .gift-lid{ transform:translateX(-50%) rotate(-25deg) translateY(-60px); }
+.open .gift-box{ filter:brightness(1.2); box-shadow:0 0 40px rgba(255,140,180,.7); }
 
-/* Letter paper */
+/* ----------------- LETTER ----------------- */
 .letter-paper{
-    width:80%;
-    max-width:550px;
-    margin:20px auto;
-    padding:0;
-    border-radius:20px;
-    opacity:0;
-    transform:scale(.7) translateY(40px);
-    transition: all .8s ease-out;
-    text-align:center;
+    width:80%; max-width:550px; margin:20px auto; padding:0; border-radius:20px;
+    opacity:0; transform:scale(.7) translateY(40px); transition: all .8s ease-out; text-align:center;
 }
-.letter-paper.letter-open{
-    opacity:1;
-    transform:scale(1) translateY(0);
-}
+.letter-paper.letter-open{ opacity:1; transform:scale(1) translateY(0); }
+.letter-img{ width:100%; height:auto; border-radius:20px; 
+    box-shadow:0 0 35px rgba(255,170,200,.6),0 0 60px rgba(255,120,180,.4); }
 
-.letter-img{
-    width:100%;
-    height:auto;
-    border-radius:20px;
-    box-shadow:
-      0 0 35px rgba(255,170,200,.6),
-      0 0 60px rgba(255,120,180,.4);
-}
-
-/* Sparkles */
-.sparkle{
-    position:absolute;
-    pointer-events:none;
-    animation:sparkleMove 3s linear infinite;
-    opacity:.8;
-}
-@keyframes sparkleMove{
-    0%{ transform:translateY(0) scale(.6); opacity:.9; }
-    100%{ transform:translateY(-200px) scale(1.2); opacity:0; }
-}
+/* ----------------- SPARKLES ----------------- */
+.sparkle{ position:absolute; pointer-events:none; animation:sparkleMove 3s linear infinite; opacity:.8; }
+@keyframes sparkleMove{ 0%{ transform:translateY(0) scale(.6); opacity:.9; } 100%{ transform:translateY(-200px) scale(1.2); opacity:0; } }
