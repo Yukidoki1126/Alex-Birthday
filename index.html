@@ -12,6 +12,7 @@
 
 <!-- Link to external CSS -->
 <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
@@ -28,14 +29,16 @@ for(let i=0;i<40;i++){
 }
 </script>
 
-<!-- Fancy Title -->
-<h1 class="cute-title">Happy Birthday Aly 🎀</h1>
-<div class="stickers">🎀 💖 ✨ 🎂 💝</div>
+<!-- First Page -->
+<div class="first-page">
+    <div class="title-container">
+        <h1 class="cute-title">Happy Birthday Aly 🎀</h1>
+        <div class="stickers">🎀 💖 ✨ 🎂 💝</div>
+        <button class="open-gift-btn" onclick="openModal()">Open your gift 🎁</button>
+    </div>
+</div>
 
-<!-- Open Gift Button -->
-<button class="open-gift-btn" onclick="openModal()">Open your gift 🎁</button>
-
-<!-- Modal -->
+<!-- Modal for gift -->
 <div id="giftModal" class="modal">
     <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
