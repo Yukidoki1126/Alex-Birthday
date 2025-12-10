@@ -1,3 +1,76 @@
+/* Full-page section */
+.first-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('https://i.imgur.com/8wGJ8Gl.png') no-repeat center center/cover; /* Hello Kitty background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container around title */
+.title-container {
+    background: rgba(255, 255, 255, 0.6); /* semi-transparent white */
+    padding: 50px 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 50px rgba(255, 140, 180, 0.7);
+    text-align: center;
+    max-width: 800px;
+}
+
+/* Huge Happy Birthday Title inside container */
+.cute-title {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 100px;
+    background: linear-gradient(90deg, #ff7ebd, #ff4fa3, #ffb6d9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 3px 15px rgba(255,100,180,0.7);
+    margin: 0 0 20px 0;
+    animation: floatText 4s ease-in-out infinite alternate;
+}
+
+/* Floating animation for title */
+@keyframes floatText {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+
+/* Stickers under title */
+.stickers {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+/* Open Gift Button */
+.open-gift-btn{
+    background:#ff88c9;
+    border:none;
+    border-radius:20px;
+    padding:14px 30px;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+.open-gift-btn:hover{
+    transform:scale(1.05);
+}
+
+/* Floating hearts */
+.heart{
+    position:absolute;
+    color:#ff7ab8;
+    animation: float 6s infinite;
+    opacity:0.7;
+}
+@keyframes float{
+    0%{ transform:translateY(0); }
+    100%{ transform:translateY(-900px); opacity:0;}
+}
+
 /* Modal styling */
 .modal {
     display: none; 
@@ -36,3 +109,36 @@
 .close-btn:hover {
     color: #ff1a75;
 }
+
+/* Gift container */
+.gift-container{
+    margin:50px auto;
+    text-align:center;
+    cursor:pointer;
+    position:relative;
+}
+
+/* gift box */
+.gift-box{
+    width:120px;
+    height:120px;
+    background:#ff7ebd;
+    border-radius:10px;
+    position:relative;
+    box-shadow:0 8px 25px rgba(255,100,160,0.4);
+    transition:.4s;
+}
+
+/* ribbon */
+.gift-box:before{
+    content:"";
+    position:absolute;
+    width:20px;
+    height:120px;
+    background:#ff4f9a;
+    left:50%;
+    transform:translateX(-50%);
+}
+.gift-box:after{
+    content:"";
+    position:absolute;
