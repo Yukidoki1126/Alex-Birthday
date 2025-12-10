@@ -24,8 +24,8 @@ body{
 
 /* Fancy Happy Birthday title */
 .cute-title{
-    font-family: 'Dancing Script', cursive; /* fancy script font */
-    font-size: 72px; /* bigger */
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 72px;
     background: linear-gradient(90deg, #ff7ebd, #ff4fa3, #ffb6d9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -143,7 +143,7 @@ body{
     margin:20px auto;
     padding:40px 30px;
     border-radius:20px;
-    font-family: 'Indie Flower', cursive; 
+    font-family: 'Gloria Hallelujah', cursive;
     line-height:1.8;
     font-size:24px;
     color:#444;
